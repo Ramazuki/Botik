@@ -1,2 +1,2 @@
 discord~=1.7.3
-PyNaCl
+PyNaCl~=1.4.0
