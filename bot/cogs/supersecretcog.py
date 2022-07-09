@@ -1,5 +1,5 @@
 import re
-from main import client
+from bot.main import client
 from discord.ext import commands
 import random
 import discord

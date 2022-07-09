@@ -1,6 +1,6 @@
 from discord.ext import commands
 import discord
-from main import client as bot
+from bot.main import client as bot
 
 
 class MyHelpCommand(commands.MinimalHelpCommand):

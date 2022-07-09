@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from main import client as bot
+from bot.main import client as bot
 
 class ReactionRoles(commands.Cog):
     def __init__(self, client):

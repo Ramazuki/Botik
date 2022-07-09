@@ -1,5 +1,5 @@
 from discord.ext import commands
-from main import client as bot
+from bot.main import client as bot
 from discord import FFmpegPCMAudio
 import random
 import discord
