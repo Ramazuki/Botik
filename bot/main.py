@@ -38,7 +38,7 @@ async def reload(ctx, ext):
 @client.command()
 @has_permissions(administrator=True)
 async def unloadall(ctx):
-    for filename in os.listdir('./cogs'):
+    for filename in os.listdir('bot/cogs'):
         if filename.endswith('.py'):
             client.unload_extension(f'cogs.{filename[:-3]}')
     print('Everything is unloaded now')
@@ -46,11 +46,11 @@ async def unloadall(ctx):
 @client.command()
 @has_permissions(administrator=True)
 async def loadall(ctx):
-    for filename in os.listdir('./cogs'):
+    for filename in os.listdir('bot/cogs'):
         if filename.endswith('.py'):
             client.load_extension(f'cogs.{filename[:-3]}')
 
-for filename in os.listdir('./cogs'):
+for filename in os.listdir('bot/cogs'):
     if filename.endswith(".py"):
         client.load_extension(f"cogs.{filename[:-3]}")
 
