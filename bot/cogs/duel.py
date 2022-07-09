@@ -44,7 +44,7 @@ class DuelModule(commands.Cog):
         #self.state = True
         self.game = True
         #Pick random russian noun
-        with io.open("./data/russian_nouns.txt", encoding="utf-8", mode='r') as ru:
+        with io.open("bot/data/russian_nouns.txt", encoding="utf-8", mode='r') as ru:
             text = ru.readlines()
 
         self.word = random.choice(text).strip()

@@ -26,7 +26,7 @@ class Talking_Ben(commands.Cog):
                 emb.set_image(
                     url="https://i.pinimg.com/564x/8f/63/2f/8f632fbf33ddc93a168999fa91525cb2.jpg")
                 await ctx.send(embed=emb)
-                source = FFmpegPCMAudio('./Content/Talking Ben/PhoneCall_Ben.wav')
+                source = FFmpegPCMAudio('bot/Content/Talking Ben/PhoneCall_Ben.wav')
                 self.voice.play(source)
             else:
                 await ctx.send("Вы не находитесь в голосовом канале")
@@ -39,7 +39,7 @@ class Talking_Ben(commands.Cog):
     async def bye(self, ctx):
         if self.caller == ctx.message.author:
             self.state = False
-            source = FFmpegPCMAudio('./Content/Talking Ben/NoAnswer_Ben.wav')
+            source = FFmpegPCMAudio('bot/Content/Talking Ben/NoAnswer_Ben.wav')
             if ctx.voice_client:
                 emb = discord.Embed(title="*Bye*", colour=discord.Colour.dark_gold())
                 emb.set_image(
@@ -63,7 +63,7 @@ class Talking_Ben(commands.Cog):
         if (message.author == self.caller) and (message.content.startswith('?') == False):
             sounds = ['Eeu_Ben', 'HoHoHo_Ben', 'No_Ben', 'Yes_Ben']
             pick = random.choice(sounds)
-            source = FFmpegPCMAudio('./Content/Talking Ben/' + pick + '.wav')
+            source = FFmpegPCMAudio('bot/Content/Talking Ben/' + pick + '.wav')
             self.voice.play(source)
 
 def setup(client):
